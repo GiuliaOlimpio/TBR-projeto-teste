@@ -52,7 +52,8 @@ h1 {
   font-weight: bold;
   font-size: 24px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 .tabela {

@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <h1>Excluir Funcionário</h1>
+  <h1>Excluir Funcionário</h1>
+  <div class="visualizacao-funcionario">
     <ul>
       <li v-for="funcionario in funcionarios" :key="funcionario.id_funcionario">
-        {{ funcionario.nome_funcionario }} - {{ funcionario.email_funcionario }} - {{ funcionario.cargo_funcionario }}
+        {{ funcionario.nome_funcionario }} - {{ funcionario.email_funcionario }} - {{ funcionario.nome_cargo }}
         <button @click="excluirFuncionario(funcionario.id_funcionario)">Excluir</button>
       </li>
     </ul>
@@ -56,3 +56,24 @@ onMounted(() => {
   buscarFuncionarios()
 })
 </script>
+
+<style scoped>
+  .visualizacao-funcionario {
+    justify-items: anchor-center;
+  
+  }
+
+  .visualizacao-funcionario ul {
+    list-style-type: none;
+  }
+  
+  h1 {
+  color: #ec344a;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+</style>

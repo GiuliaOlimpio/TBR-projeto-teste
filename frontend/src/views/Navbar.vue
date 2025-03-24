@@ -19,7 +19,7 @@ import { RouterLink } from 'vue-router'
   top: 0px;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 30px;
+  padding: 1rem 10rem;
   background-color: #1a1a1a; /* cor do background da logo */
   color: white;
 }
@@ -36,7 +36,7 @@ import { RouterLink } from 'vue-router'
 
 .nav-links {
   display: flex;
-  margin-right: 30px;
+  margin-right: 3rem;
 }
 
 .nav-links a {
@@ -44,8 +44,8 @@ import { RouterLink } from 'vue-router'
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
-  font-weight: light;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
+  margin-left: 3rem;
   border-radius: 5px;
   
 }
