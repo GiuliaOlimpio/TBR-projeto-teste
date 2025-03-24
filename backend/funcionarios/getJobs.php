@@ -1,4 +1,5 @@
 <?php
+//para pegar os nomes dos cargos
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
