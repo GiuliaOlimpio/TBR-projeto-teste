@@ -1,0 +1,10 @@
+CREATE TABLE `tbr_teste`. (`id_funcionario` INT NOT NULL AUTO_INCREMENT , `nome_funcionario` VARCHAR(100) NOT NULL , `email_funcionario` VARCHAR(100) NOT NULL , `cargo_funcionario` INT NOT NULL , PRIMARY KEY (`id_funcionario`), UNIQUE `unique_email` (`email_funcionario`)) ENGINE = InnoDB;
+CREATE TABLE `tbr_teste`.`cargos` (`id_cargo` INT NOT NULL AUTO_INCREMENT , `nome_cargo` VARCHAR(50) NOT NULL , PRIMARY KEY (`id_cargo`)) ENGINE = InnoDB;
+
+INSERT INTO `cargos` (`id_cargo`, `nome_cargo`) VALUES (NULL, 'Designer');
+INSERT INTO `cargos` (`id_cargo`, `nome_cargo`) VALUES (NULL, 'Desenvolvedor');
+INSERT INTO `cargos` (`id_cargo`, `nome_cargo`) VALUES (NULL, 'Analista');
+
+ALTER TABLE `funcionarios` ADD CONSTRAINT `fk_funcionarios_cargos` FOREIGN KEY (`cargo_funcionario`) REFERENCES `cargos`(`id_cargo`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+INSERT INTO `funcionarios` (`id_funcionario`, `nome_funcionario`, `email_funcionario`, `cargo_funcionario`) VALUES (NULL, 'Nome Exemplo 1', 'nomeexemplo1@tbr.com.br', '2');
