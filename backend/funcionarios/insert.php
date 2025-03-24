@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email_funcionario = $data['email_funcionario'];
     $cargo_funcionario = $data['cargo_funcionario'];
 
-    // Verificar se o e-mail já existe
+    // verifica email
     $checkEmailSql = "SELECT id_funcionario FROM funcionarios WHERE email_funcionario = ?";
     $checkStmt = $conn->prepare($checkEmailSql);
 
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     $checkStmt->close();
 
-    // Se o e-mail não existe, prossegue com a inserção
+    // se ainda não existir, continua
     $sql = "INSERT INTO funcionarios (nome_funcionario, email_funcionario, cargo_funcionario) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
